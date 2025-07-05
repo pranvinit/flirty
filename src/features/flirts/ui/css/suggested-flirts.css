@@ -22,3 +22,10 @@
   transform: scale(0.95);
   border-color: var(--accent);
 }
+
+@media (max-width: 768px) {
+  .suggested-flirts {
+    height: 600px;
+    overflow-y: auto;
+  }
+}
