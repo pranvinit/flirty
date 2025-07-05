@@ -38,16 +38,15 @@ export default function TopFlirtList() {
           label="Flirt Score"
         />
       </div>
-      {isLoading ||
-        (isFetching && (
-          <PrimarySpinner
-            style={{
-              fontSize: 24,
-              color: "var(--accent)",
-              marginTop: "var(--spacing-md)",
-            }}
-          />
-        ))}
+      {(isLoading || isFetching) && (
+        <PrimarySpinner
+          style={{
+            fontSize: 24,
+            color: "var(--accent)",
+            marginTop: "var(--spacing-md)",
+          }}
+        />
+      )}
       {isError && <p>Error loading top flirts.</p>}
       {topFlirts && topFlirts.length > 0 && (
         <ul className="top-flirt-list">

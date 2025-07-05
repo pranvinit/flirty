@@ -35,16 +35,15 @@ export default function SuggestedFlirtList() {
   return (
     <div className="suggested-flirts g-bg">
       <h2>Suggested Flirts</h2>
-      {isLoading ||
-        (isFetching && (
-          <PrimarySpinner
-            style={{
-              fontSize: 24,
-              color: "var(--accent)",
-              marginTop: "var(--spacing-md)",
-            }}
-          />
-        ))}
+      {(isLoading || isFetching) && (
+        <PrimarySpinner
+          style={{
+            fontSize: 24,
+            color: "var(--accent)",
+            marginTop: "var(--spacing-md)",
+          }}
+        />
+      )}
       {isError && <p>Error loading suggested flirts.</p>}
       {suggestedFlirts && suggestedFlirts.length > 0 && (
         <ul className="suggested-flirt-list">
