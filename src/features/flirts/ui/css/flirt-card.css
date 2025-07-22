@@ -26,7 +26,6 @@
   border-radius: var(--radius-md);
   padding: 4px 6px;
   cursor: pointer;
-  min-width: 28px;
 }
 
 .flirt-icons button {
